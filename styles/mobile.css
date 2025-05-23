@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* FUNDO DE TUDO */
+body {
+    background-color: #e6e6e6;
+    font-size: 14px;
+}
+
+/* INÍCIO MENU */
+.header {
+    background-color: #5B9ED9;
+    padding: 1px;
+    text-align: center;
+    position: relative;
+    /* Para o menu hambúrguer */
+}
+
+/* Estilos para o menu hambúrguer */
+.hamburger {
+    display: none;
+    /* Escondido por padrão em telas grandes */
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+.menu {
+    display: none;
+    /* Escondido por padrão */
+    flex-direction: column;
+    background-color: #5B9ED9;
+    position: absolute;
+    top: 50px;
+    /* Ajuste conforme necessário */
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu a {
+    padding: 10px;
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+.menu a:hover {
+    background-color: white;
+    color: rgb(82, 159, 231);
+}
+
+/* CATEGORIAS E LEIA MAIS */
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #497AA6;
+}
+
+/* TAMANHO DA PARTE BRANCA ONDE O POST É COLOCADO */
+.post p {
+    margin: 10px 0;
+}
+
+.menu,
+.logo {
+    padding: 5px;
+}
+
+/* COR DO TEXTO SEÇÕES MENU */
+.menu a,
+.menu a:visited {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+}
+
+/* COR DO TEXTO SELECIONADO */
+.menu a:hover {
+    background-color: white;
+    color: rgb(82, 159, 231);
+}
+
+/* FINAL MENU */
+
+/* ESPAÇAMENTO PARA POST */
+.container {
+    width: 920px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* LARGURA DA PARTE BRANCA ONDE O POST É COLOCADO */
+.posts {
+    width: 660px;
+    float: left;
+}
+
+/* FUNDO BRANCO ONDE O POST É COLOCADO */
+.post {
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+/* TÍTULO DO POST */
+h2 {
+    font-size: 15px;
+    color: #4a4e52;
+}
+
+/* DATA DO POST */
+.data-post {
+    font-size: 0.8em;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* BARRA LATERAL (DESTAQUES E CATEGORIAS) */
+.barra-lateral {
+    width: 240px;
+    float: right;
+}
+
+/* CONTEÚDO LATERAL (DESTAQUES E CATEGORIAS) */
+.conteudo-lateral {
+    background-color: white;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+/* COR DE FUNDO DESTAQUES E CATEGORIAS */
+.conteudo-lateral h3 {
+    background-color: #A7C1D9;
+    color: black;
+    padding: 5px;
+}
+
+/* COR DE LINHA SEPARANDO DESTAQUES */
+.post-destaque {
+    font-size: 0.9em;
+    padding: 5px;
+    border-bottom: 1px solid lightgray;
+}
+
+/* ATRIBUTO PARA O ÚLTIMO DESTAQUE NÃO CONTER A LINHA */
+.post-destaque:last-child {
+    border: none;
+}
+
+/* FOOTER */
+.footer {
+    clear: both;
+    background-color: rgb(220, 220, 220);
+    padding: 10px;
+}
+
+/* TEXTO DO FOOTER */
+.footer p {
+    color: black;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        /* Mostra o menu hambúrguer em telas pequenas */
+    }
+
+    .menu {
+        display: none;
+        /* Escondido por padrão */
+    }
+
+    .menu.active {
+        display: flex; /* Mostra o menu quando ativo */
+    }
+
+    .container {
+        width: 100%;
+        /* O container ocupa 100% da largura em telas pequenas */
+        padding: 10px;
+               /* Reduz o preenchimento */
+    }
+
+    .posts {
+        width: 100%;
+        /* As postagens ocupam 100% da largura */
+        float: none;
+        /* Remove flutuação */
+    }
+
+    .barra-lateral {
+        width: 100%;
+        /* A barra lateral ocupa 100% da largura */
+        float: none;
+        /* Remove flutuação */
+        margin-top: 20px;
+        /* Adiciona um espaço acima da barra lateral */
+    }
+
+    .post {
+        padding: 15px;
+        /* Reduz o preenchimento das postagens */
+    }
+
+    h2 {
+        font-size: 18px;
+        /* Aumenta o tamanho da fonte do título em telas pequenas */
+    }
+
+    .data-post {
+        font-size: 0.9em;
+        /* Aumenta o tamanho da fonte da data */
+    }
+
+    .conteudo-lateral {
+        margin-bottom: 10px;
+        /* Reduz o espaço entre os conteúdos laterais */
+    }
+
+    .footer {
+        padding: 15px;
+        /* Aumenta o preenchimento do rodapé */
+    }
+
+    .footer p {
+        font-size: 14px;
+        /* Aumenta o tamanho da fonte do texto do rodapé */
+    }
+}
